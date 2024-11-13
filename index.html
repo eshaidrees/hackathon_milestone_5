@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style=" text-align: center; color: black;">Shareable Resume Builder</h1>
+    <form id="resume-form">
+        <h2>Enter Your Information</h2>
+        <fieldset>
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="name" placeholder="Enter your name" required ><br>
+           
+            <label for="fullname">FullName:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your fullname" required ><br>
+           
+            <label for="resumetitle">Resume Title:</label>
+            <input type="text" id="resumetitle" name="resumetitle" placeholder="Enter your resume title" required ><br>
+
+            <label for="dateOfbirth">Date Of Birth:</label>
+            <input type="text" id="dateOfbirth" name="dateOfbirth" placeholder="Enter your date of birth" required ><br>
+          
+           <label for="contact">Contact number:</label>
+           <input type="text" id="contact" name="contact" placeholder="Enter your contact number" required><br>
+
+           <label for="email">Email address:</label>
+           <input type="text" id="email" name="email" placeholder="Enter your email" required><br>
+
+            
+           <label for="profilePic"> Choose Profile Picture</label>
+           <input type="file" id="profilePic" name="profilePic" >
+        </fieldset>
+
+       <fieldset>
+           <label for="education">Education:</label>
+           <textarea id="education" name="education" placeholder="Enter your education" required></textarea><br>
+       </fieldset>
+
+       <fieldset>
+           <label for="skills">Skills:</label>
+           <input type="text" id="skills" name="skills"placeholder="Enter your skills" required><br>
+       </fieldset>
+
+       <fieldset>
+           <label for="work-experience">Work Experience:</label>
+           <textarea id="work-experience" name="workExperience" placeholder="Enter your work experience" required></textarea><br>
+       </fieldset>
+
+       <fieldset>
+          <label for="language">Language:</label>
+           <input id="language" name="language" placeholder="Enter your language" required><br>
+       </fieldset>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+    
+     <div id="resume-display" style="display: none;">
+        
+            <div class="resume-columns">
+                <!-- Left Column -->
+                <div class="resume-left">
+                    <img id="resumeImage" alt="Profile Picture">
+                    <h3 style="color: white;">Profile</h3>
+                    <p id="nameDisplay"></p>
+                    <p id="fullnameDisplay"></p>
+                    <p id="dateofbirthDisplay"></p>
+                    
+                    <h3 style="color: white;">Contact</h3>
+                    <p id="contactDisplay"></p>
+                    <p id="emailDisplay"></p>
+
+                </div>
+        
+                <!-- Right Column -->
+                <div class="resume-right">
+                    <h1 id="resumetitleDisplay"></h1>
+
+                    <h3>Education</h3>
+                    <p id="educationDisplay"></p>
+                    <h3 >Skills</h3>
+                    <ul id="skillsDisplay"></ul>
+                    <h3 >Work Experience</h3>
+                    <p id="experienceDisplay"></p>
+                    <h3 >Language</h3>
+                    <p id="languageDisplay"></p>
+                </div>
+                </div>
+
+                 <button type="button" onclick="editResume()">Edit</button>
+                 <button id="downloadPdfButton">Download PDF</button>
+
+     </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

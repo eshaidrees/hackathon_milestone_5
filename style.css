@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(255, 255, 255);
+    margin: 20px;
+    padding: 0;
+}
+
+h1 {
+    font-family : sans-serif;
+    text-align: center;
+    color: rgb(19, 54, 105);
+}
+form {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    background: rgb(209, 213, 235);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    color: black;
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: black
+}
+
+input, textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+}
+
+::placeholder {
+    color: #969494;
+}
+
+button {
+    display: block;
+    margin: 10px ;
+    padding: 10px;
+    background-color: #222121;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
+
+#resume-display {
+    display: none;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color:  white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: black;
+    border: 1px  rgb(19, 54, 105);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(31, 89, 177);
+    padding: 10px;
+
+}
+
+ul {
+    list-style-type: style type;
+    padding: 5;
+}
+
+#resume {
+    display: none;
+}
+
+fieldset {
+    border-radius: 10px;
+    border-color:rgb(235, 236, 255);
+}
+
+
+
+#resume-display img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+.resume-columns {
+    display: flex;
+    margin-top: 0px;
+}
+
+.resume-left{
+    min-width: 200px; 
+    padding: 10px;
+    background-color:rgb(19, 54, 105);
+}
+.resume-right {
+    min-width: 450px; 
+    padding: 10px;
+    background-color:white;
+}
+
+.resume-left p {
+    color: white;
+}
+
+p {
+    text-align: start;
+    padding: 10px;
+    color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .resume-columns {
+        flex-direction: column;
+    }
+
+    .resume-left, .resume-right {
+        min-width: 100%;
+        padding: 5px;
+    }
+
+    h1, h3, p, label, button {
+        font-size: 1rem;
+    }
+
+    form {
+        padding: 15px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 8px 15px;
+    }
+
+ 
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #resume-display, #resume-display * {
+        visibility: visible;
+    }
+    #resume-display {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    /* Hide the download button itself during printing */
+    #downloadPdfButton {
+        display: none;
+    }
+   
+}
